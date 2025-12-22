@@ -75,3 +75,30 @@
     }
   });
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("contact.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert(data.message || "Failed to send message");
+      }
+    })
+    .catch(() => {
+      alert("Network error");
+    });
+  });
+});
