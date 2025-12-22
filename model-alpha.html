@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model Alpha – The Gunsmith N.V.</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="product-detail-page">
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="assets/logo.png" alt="The Gunsmith N.V. Logo" />
+    </div>
+
+    <nav class="main-nav" id="main-menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <a href="#" class="header-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="header-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" class="header-icon" aria-label="User">
+        <i class="fa-regular fa-user"></i>
+      </a>
+    </div>
+
+    <!-- Burger button (alleen zichtbaar op mobiel via CSS) -->
+    <button
+      class="burger"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="main-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main class="product-detail-main">
+  <section class="product-detail-hero">
+    <div class="container product-detail-hero-inner">
+     <div class="product-slider">
+  <div class="slide active">
+    <img src="assets/glock.png" alt="Model Alpha 1">
+  </div>
+  <div class="slide">
+    <img src="assets/glock.png" alt="Model Alpha 2">
+  </div>
+  <div class="slide">
+    <img src="assets/glock.png" alt="Model Alpha 3">
+  </div>
+
+  <!-- Controls -->
+  <button class="slide-btn prev">❮</button>
+  <button class="slide-btn next">❯</button>
+</div>
+
+
+      <div class="product-detail-info">
+        <span class="badge">9MM TRAINING PISTOL</span>
+        <h1>Model Alpha</h1>
+        <p>
+          Model Alpha is a reliable 9mm semi-automatic handgun designed for intensive training and
+          range sessions. Lightweight, controllable and precise, it is the perfect choice for
+          shooters who are building solid fundamentals.
+        </p>
+        <span class="price">$799</span>
+
+        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn primary">REQUEST INFO</a>
+          <a href="products.html" class="btn ghost">BACK TO PRODUCTS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-detail-meta">
+    <div class="container product-specs">
+      <div>
+        <h2>Overview</h2>
+        <ul>
+          <li>Optimized recoil for beginners and intermediate shooters.</li>
+          <li>Ergonomic grip texture for secure handling in all conditions.</li>
+          <li>Standard accessory rail for lights or lasers.</li>
+          <li>Simple field stripping for easy cleaning.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Specifications</h2>
+        <table class="spec-table">
+          <tr>
+            <th>Caliber</th>
+            <td>9x19mm</td>
+          </tr>
+          <tr>
+            <th>Action</th>
+            <td>Semi-automatic</td>
+          </tr>
+          <tr>
+            <th>Magazine Capacity</th>
+            <td>15+1 rounds</td>
+          </tr>
+          <tr>
+            <th>Barrel Length</th>
+            <td>4.1&quot; (104 mm)</td>
+          </tr>
+          <tr>
+            <th>Weight (unloaded)</th>
+            <td>780 g</td>
+          </tr>
+          <tr>
+            <th>Frame</th>
+            <td>Polymer</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <p>&copy; 2024 The Gunsmith N.V. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
