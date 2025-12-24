@@ -11,7 +11,31 @@ body{
   background-color: #050505;
   color: #fff;
 }
+/* LOGO SLIDER ---------------------------------------------*/
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
 
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: max-content;
+  will-change: transform;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+}
+
+.logo-item img {
+  height: 46px;
+  width: auto;
+  display: block;
+}
 /* PAGE TYPES ------------------------------------------------- */
 
 .products-page, 
@@ -484,7 +508,7 @@ body.nav-open .burger span:nth-child(3) {
 .shooting-classes{
   background-color: #ffffff;
   color: #111;
-  padding: 120px 0 100px;
+  padding: 40px 0 100px;
 }
 
 .classes-images{
@@ -528,59 +552,6 @@ body.nav-open .burger span:nth-child(3) {
   opacity: 0.6;
 }
 
-.benefits{
-  text-align: center;
-}
-
-.benefits h3{
-  font-size: 2.1rem;
-  margin: 0 0 40px;
-}
-
-.benefits-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.benefit-item{
-  background-color: #ffffff;
-  border: 1px solid #eee;
-  padding: 30px 20px;
-  border-radius: 6px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.benefit-item:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
-}
-
-.benefit-item .material-icons{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 2px solid #ff6600;
-  color: #ff6600;
-  margin-bottom: 18px;
-}
-
-.benefit-item h4{
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.benefit-item p{
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem;
-  color: #555;
-}
 
 /* UNIT SECTION ---------------------------------------------- */
 
@@ -588,6 +559,39 @@ body.nav-open .burger span:nth-child(3) {
   background-color: #ffffff;
   color: #111;
   padding: 100px 0 70px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* keep all real content above the background image */
+.unit-section .container,
+.unit-stats{
+  position: relative;
+  z-index: 2;
+}
+
+/* PARALLAX decorative image pinned bottom-right */
+.unit-bg{
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+
+  width: min(820px, 70vw);
+  height: auto;
+  opacity: 0.22;
+
+  /* parallax performance */
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+
+/* optional: hide on very small screens */
+@media (max-width: 520px){
+  .unit-bg{ display: none; }
 }
 
 .unit-container{
@@ -616,6 +620,7 @@ body.nav-open .burger span:nth-child(3) {
 
 .unit-image img{
   border-radius: 8px;
+  width: 10vw;
 }
 
 .unit-stats{
@@ -640,7 +645,6 @@ body.nav-open .burger span:nth-child(3) {
   font-size: 0.75rem;
   letter-spacing: 3px;
 }
-
 /* TESTIMONIALS ---------------------------------------------- */
 
 .testimonials-section{
@@ -1173,9 +1177,6 @@ body.nav-open .burger span:nth-child(3) {
     font-size: 2rem;
   }
 
-  .benefits-grid{
-    grid-template-columns: 1fr;
-  }
 
   .products-grid{
     grid-template-columns: 1fr;
