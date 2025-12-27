@@ -160,3 +160,27 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", onScroll);
   onScroll();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var cursor = document.querySelector(".custom-cursor");
+  if (!cursor) return;
+
+  // move cursor
+  document.addEventListener("mousemove", function (e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  // hover effect on interactive elements
+  var hoverTargets = document.querySelectorAll(
+    "a, button, .btn, input, textarea, select"
+  );
+
+  hoverTargets.forEach(function (el) {
+    el.addEventListener("mouseenter", function () {
+      cursor.classList.add("cursor-hover");
+    });
+    el.addEventListener("mouseleave", function () {
+      cursor.classList.remove("cursor-hover");
+    });
+  });
+});

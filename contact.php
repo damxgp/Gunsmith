@@ -24,7 +24,7 @@ if (!$name || !$email || !$topic || !$message) {
 }
 
 // SMTP SETTINGS
-$smtpHost = "ssl://smtp.purelymail.com";
+$smtpHost = "smtp.purelymail.com";
 $smtpPort = 465;
 $smtpUser = "info@thegunsmithnv.com";
 $smtpPass = "nywxir-qopfec-woxTa6";
